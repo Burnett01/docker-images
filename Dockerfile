@@ -4,7 +4,7 @@ FROM php:7.3-cli-buster
 RUN apt-get update && apt-get install -y --no-install-recommends \
     mariadb-client \
   	libjpeg-dev \
-  	libpng12-dev \
+  	libpng-dev \
     libmagickwand-dev \
     libmcrypt-dev \
     git \
