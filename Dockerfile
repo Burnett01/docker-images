@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   	libpng-dev \
     libmagickwand-dev \
     libmcrypt-dev \
+    libzip-dev\
     git \
     zip \
   && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
