@@ -2,7 +2,7 @@ FROM php:7.3-cli-buster
 
 # Dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    mysql-client \
+    mariadb-client \
   	libjpeg-dev \
   	libpng12-dev \
     libmagickwand-dev \
