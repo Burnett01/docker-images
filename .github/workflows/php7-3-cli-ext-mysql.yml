@@ -6,29 +6,13 @@ on:
       - master
     tags:
       - v*
-  pull_request:
 
 env:
-  IMAGE_NAME: docker-php7-3-cli-ext-mysql
+  IMAGE_NAME: php7-3-cli-ext-mysql/php7-3-cli-ext-mysql
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v1
-
-      - name: Run tests
-        run: |
-          if [ -f docker-compose.test.yml ]; then
-            docker-compose --file docker-compose.test.yml build
-            docker-compose --file docker-compose.test.yml run sut
-          else
-            docker build . --file Dockerfile
-          fi
   push:
-    needs: test
-
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
 
