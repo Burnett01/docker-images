@@ -1,4 +1,4 @@
-name: Docker
+name: php7-3-cli-ext-mysql
 
 on:
   push:
