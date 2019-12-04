@@ -9,7 +9,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: base
+  IMAGE_NAME: docker-php7-3-cli-ext-mysql
 
 jobs:
   test:
