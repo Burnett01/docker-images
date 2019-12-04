@@ -15,7 +15,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && docker-php-ext-install zip \
   && docker-php-ext-install exif \
   && docker-php-ext-install mbstring \
-  && docker-php-ext-install mcrypt \
   && docker-php-ext-install mysqli pdo pdo_mysql \
   && rm -rf /var/lib/apt/lists/*
 
