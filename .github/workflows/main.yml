@@ -43,7 +43,7 @@ jobs:
 
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/burnett01/docker-php7-3-cli-ext-mysql/$IMAGE_NAME
+          IMAGE_ID=docker.pkg.github.com/burnett01/docker-images/$IMAGE_NAME
 
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
