@@ -27,9 +27,7 @@ jobs:
         
       - name: Push image
         run: |
-          ACTOR=${{ github.actor }}
-          ACTOR=${ACTOR,,}
-          IMAGE_ID=docker.pkg.github.com/${{ github.actor }}/docker-images/$IMAGE_NAME
+          IMAGE_ID=docker.pkg.github.com/burnett01/docker-images/$IMAGE_NAME
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
           # Strip "v" prefix from tag name
@@ -46,7 +44,7 @@ jobs:
         
       - name: Push image
         run: |
-          IMAGE_ID=docker.io/${{ secrets.DOCKER_USERNAME }}/docker-images/$IMAGE_NAME
+          IMAGE_ID=docker.io/burnett0/docker-images/$IMAGE_NAME
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
           # Strip "v" prefix from tag name
