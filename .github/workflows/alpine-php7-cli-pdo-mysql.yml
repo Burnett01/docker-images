@@ -27,6 +27,7 @@ jobs:
         
       - name: Push image
         run: |
+          ACTOR=${${{ github.actor }},,}
           IMAGE_ID=docker.pkg.github.com/${{ github.actor }}/docker-images/$IMAGE_NAME
           # Strip git ref prefix from version
           VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
