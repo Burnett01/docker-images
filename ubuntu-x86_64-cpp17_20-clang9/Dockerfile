@@ -11,7 +11,8 @@ RUN apt-get update && apt-get install -y \
   curl \
   git \
   openssl \
-  zlib \
+  libssl-dev \
+  zlib1g-dev \
   && rm -rf /var/lib/apt/lists/* \
   && curl -SL http://releases.llvm.org/9.0.0/clang+llvm-9.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz \
   | tar -xJC . && \
