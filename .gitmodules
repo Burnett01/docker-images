@@ -1,0 +1,3 @@
+[submodule "drawio-batch"]
+	path = drawio-batch
+	url = https://github.com/languitar/drawio-batch.git

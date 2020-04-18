@@ -1,0 +1,45 @@
+
+name: Build
+
+on: [push]
+env:
+  IMAGE_NAME: alpine-drawio-batch
+  
+jobs:
+
+  push:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push'
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'recursive'
+
+      - name: Build image
+        run: | 
+          docker build . --file Dockerfile --tag image
+      - name: Log into Github Docker registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        
+      - name: Push image
+        run: |
+          IMAGE_ID=docker.pkg.github.com/burnett01/docker-images/$IMAGE_NAME
+          docker tag image $IMAGE_ID:latest
+          docker push $IMAGE_ID:latest
+        
+      - name: Log into Docker registry
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login docker.io -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+        
+      - name: Push image
+        run: |
+          IMAGE_ID=docker.io/burnett0/$IMAGE_NAME
+          docker tag image $IMAGE_ID:latest
+          docker push $IMAGE_ID:latest
+
+      - name: Docker Hub Description
+        uses: peter-evans/dockerhub-description@v2.1.0
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          DOCKERHUB_REPOSITORY: burnett0/alpine-drawio-batch
