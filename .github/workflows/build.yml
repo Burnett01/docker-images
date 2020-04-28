@@ -1,5 +1,5 @@
 
-name: Build
+name: CI & CD
 
 on: [push]
 env:
@@ -8,7 +8,7 @@ env:
 
 jobs:
 
-  push:
+  build-deploy:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
@@ -42,4 +42,4 @@ jobs:
         env:
           DOCKERHUB_USERNAME: ${{ env.DOCKER_REPO }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKERHUB_REPOSITORY: burnett0/alpine-drawio-batch
+          DOCKERHUB_REPOSITORY: ${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }}
