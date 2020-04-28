@@ -1,9 +1,10 @@
 
-name: CI & CD
+name: alpine-php7-cli-pdo-mysql
 
 on: [push]
+
 env:
-  IMAGE_NAME: alpine-php7-cli-pdo-mysql
+  IMAGE_NAME: ${{ github.workflow	}}
   GITHUB_USER: burnett01
   DOCKER_USER: burnett0
 
