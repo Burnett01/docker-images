@@ -1,11 +1,12 @@
 
-name: CI & CD
-
 on: [push]
+
 env:
   IMAGE_NAME: ubuntu-x86_64-cpp17_20-clang9
   GITHUB_USER: burnett01
   DOCKER_USER: burnett0
+
+name: ${{ env.IMAGE_NAME }}
 
 jobs:
 
