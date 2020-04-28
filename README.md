@@ -1,19 +1,26 @@
-![alpine-drawio-batch](https://github.com/Burnett01/docker-images/workflows/alpine-drawio-batch/badge.svg?branch=alpine-php7-cli-pdo-mysql) ![alpine-drawio-batch](https://github.com/Burnett01/docker-images/workflows/alpine-drawio-batch/badge.svg?branch=ubuntu-x86_64-cpp17_20-clang9) ![alpine-drawio-batch](https://github.com/Burnett01/docker-images/workflows/alpine-drawio-batch/badge.svg?branch=alpine-drawio-batch)
+Here you can find my Docker images. <br />
+I have configured fully automated build & deploy pipelines for those images so <br /> that they stay in sync on Docker Hub and the Github Package Registry.
+
+Check branches for image description and source.
 
 ---
 
-Check branches for image source.
+## Available images
 
-**Available images:**
+### alpine-php7-cli-pdo-mysql ![alpine-php7-cli-pdo-mysql](https://github.com/Burnett01/docker-images/workflows/alpine-php7-cli-pdo-mysql/badge.svg?branch=alpine-php7-cli-pdo-mysql)
 
-+ alpine-php7-cli-pdo-mysql
-+ ubuntu-x86_64-cpp17_20-clang9
-+ alpine-drawio-batch
+### ubuntu-x86_64-cpp17_20-clang9 ![ubuntu-x86_64-cpp17_20-clang9](https://github.com/Burnett01/docker-images/workflows/ubuntu-x86_64-cpp17_20-clang9/badge.svg?branch=ubuntu-x86_64-cpp17_20-clang9)
 
-**Docker Hub**
+### alpine-drawio-batch ![alpine-drawio-batch](https://github.com/Burnett01/docker-images/workflows/alpine-drawio-batch/badge.svg?branch=alpine-drawio-batch)
+
+---
+
+## Docker Hub
 
 https://hub.docker.com/u/burnett0
 
-**Github Package Registry**
+---
+
+## Github Package Registry
 
 https://github.com/Burnett01/docker-images/packages
