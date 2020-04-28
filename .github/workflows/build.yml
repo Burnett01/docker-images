@@ -1,45 +1,37 @@
 
-name: Build
+name: CI & CD
 
 on: [push]
 env:
   IMAGE_NAME: ubuntu-x86_64-cpp17_20-clang9
-  
+  GITHUB_USER: burnett01
+  DOCKER_USER: burnett0
+
 jobs:
 
-  push:
-    runs-on: ubuntu-latest
+  build-deploy:
     if: github.event_name == 'push'
-
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        with:
-          submodules: 'recursive'
 
       - name: Build image
         run: | 
           docker build . --file Dockerfile --tag image
       - name: Log into Github Docker registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ env.GITHUB_USER }} --password-stdin
         
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/burnett01/docker-images/$IMAGE_NAME
+          IMAGE_ID=docker.pkg.github.com/${{ env.GITHUB_USER }}/docker-images/${{ env.IMAGE_NAME }}
           docker tag image $IMAGE_ID:latest
           docker push $IMAGE_ID:latest
         
       - name: Log into Docker registry
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login docker.io -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+        run: echo "${{ secrets.DOCKER_TOKEN }}" | docker login docker.io -u ${{ env.DOCKER_USER }} --password-stdin
         
       - name: Push image
         run: |
-          IMAGE_ID=docker.io/burnett0/$IMAGE_NAME
+          IMAGE_ID=docker.io/${{ env.DOCKER_USER }}/${{ env.IMAGE_NAME }}
           docker tag image $IMAGE_ID:latest
           docker push $IMAGE_ID:latest
-
-      - name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v2.1.0
-        env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKERHUB_REPOSITORY: burnett0/ubuntu-x86_64-cpp17_20-clang9
