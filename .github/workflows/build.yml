@@ -1,9 +1,10 @@
 
-name: CI & CD
+name: alpine-drawio-batch
 
 on: [push]
+
 env:
-  IMAGE_NAME: alpine-drawio-batch
+  IMAGE_NAME: ${{ github.workflow	}}
   GITHUB_USER: burnett01
   DOCKER_USER: burnett0
 
