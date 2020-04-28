@@ -4,7 +4,8 @@ name: CI & CD
 on: [push]
 env:
   IMAGE_NAME: alpine-drawio-batch
-  DOCKER_REPO: burnett0
+  GITHUB_USER: burnett01
+  DOCKER_USER: burnett0
 
 jobs:
 
@@ -20,26 +21,26 @@ jobs:
         run: | 
           docker build . --file Dockerfile --tag image
       - name: Log into Github Docker registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ env.GITHUB_USER }} --password-stdin
         
       - name: Push image
         run: |
-          IMAGE_ID=docker.pkg.github.com/${{ github.actor }}/docker-images/${{ env.IMAGE_NAME }}
+          IMAGE_ID=docker.pkg.github.com/${{ env.GITHUB_USER }}/docker-images/${{ env.IMAGE_NAME }}
           docker tag image $IMAGE_ID:latest
           docker push $IMAGE_ID:latest
         
       - name: Log into Docker registry
-        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login docker.io -u ${{ env.DOCKER_REPO }} --password-stdin
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login docker.io -u ${{ env.DOCKER_USER }} --password-stdin
         
       - name: Push image
         run: |
-          IMAGE_ID=docker.io/${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }}
+          IMAGE_ID=docker.io/${{ env.DOCKER_USER }}/${{ env.IMAGE_NAME }}
           docker tag image $IMAGE_ID:latest
           docker push $IMAGE_ID:latest
 
       - name: Patch Description
         uses: peter-evans/dockerhub-description@v2.1.0
         env:
-          DOCKERHUB_USERNAME: ${{ env.DOCKER_REPO }}
+          DOCKERHUB_USERNAME: ${{ env.DOCKER_USER }}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          DOCKERHUB_REPOSITORY: ${{ env.DOCKER_REPO }}/${{ env.IMAGE_NAME }}
+          DOCKERHUB_REPOSITORY: ${{ env.DOCKER_USER }}/${{ env.IMAGE_NAME }}
