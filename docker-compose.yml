@@ -1,0 +1,9 @@
+version: "3"
+services:
+  lumen:
+    image: "burnett0/alpine-php7-lumen"
+    volumes:
+      - ./lumen:/lumen
+    ports:
+      - "80:80"
+    tty: true

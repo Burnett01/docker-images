@@ -1,5 +1,5 @@
 
-name: alpine-php7-cli-pdo-mysql
+name: alpine-php7-lumen
 
 on: [push]
 

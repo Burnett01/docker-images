@@ -1,5 +1,27 @@
-FROM alpine:3.11
+# Base Image
+FROM burnett0/alpine-php7-cli-pdo-mysql
 
 # Dependencies
-RUN apk --update --no-cache add bash php7 php7-pdo php7-pdo_mysql
+RUN apk --update --no-cache add \
+    git curl ca-certificates composer \
+    php7-tokenizer php7-zip php7-curl php7-mbstring \
+    php7-dom php7-xml php7-xmlwriter php7-ctype php7-intl php7-pecl-uuid \
+    php7-ftp php7-bcmath php7-pecl-memcached php7-gmp \
+    php7-pcntl php7-posix php7-gd php7-soap php7-pecl-xdebug
+
+# SSL Certs
+RUN curl -O -k http://curl.haxx.se/ca/cacert.pem
+RUN mv cacert.pem /etc/ssl/cert.pem
+RUN update-ca-certificates
+
+# Cleanup
 RUN rm -rf /var/cache/apk/*
+
+# Setup
+COPY docker/entrypoint.sh /usr/local/bin/
+RUN ln -s usr/local/bin/entrypoint.sh /entrypoint.sh
+
+EXPOSE 80
+
+# Entry
+ENTRYPOINT ["entrypoint.sh"]
