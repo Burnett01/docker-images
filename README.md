@@ -21,6 +21,18 @@ Exposed Ports: 80
 
 **Use with docker-compose:**
 
+```yml
+version: "3"
+services:
+  lumen:
+    image: "burnett0/alpine-php7-lumen"
+    volumes:
+      - ./lumen:/lumen
+    ports:
+      - "80:80"
+    tty: true
+```
+
 ```docker-compose up```
 
 ## Usage
