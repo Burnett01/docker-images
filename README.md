@@ -1,5 +1,6 @@
-Here you can find my Docker images. <br />
-I have configured fully automated build & deploy pipelines for those images so <br /> that they stay in sync on Docker Hub and the Github Package Registry.
+Here you can find my Docker images that I have configured <br>
+to be built and deployed fully automatically, <br>
+so they stay in sync with the Docker Hub and Github Package Registry.
 
 Check branches for image description and source.
 
