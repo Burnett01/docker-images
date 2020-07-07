@@ -4,6 +4,7 @@ Docker Image for developing [Laravel Lumen](https://lumen.laravel.com/) applicat
 and the latest Laravel Lumen version.
 
 Features:
+
     + First-time setup
     + PHP 7.3, MySQL, Composer, Curl, PHP 7 extensions
 
