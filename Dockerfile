@@ -18,10 +18,10 @@ RUN update-ca-certificates
 RUN rm -rf /var/cache/apk/*
 
 # Setup
-COPY docker/entrypoint.sh /usr/local/bin/
-RUN ln -s usr/local/bin/entrypoint.sh /entrypoint.sh
+COPY docker/entrypoint.sh /
+RUN chmod +x /entrypoint.sh
 
 EXPOSE 80
 
 # Entry
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
