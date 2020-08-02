@@ -8,3 +8,4 @@ fi
 
 cd /lumen
 php -S 0.0.0.0:80 -t public
+
