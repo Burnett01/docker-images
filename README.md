@@ -34,8 +34,8 @@ services:
 
 ## Usage
 
-After setup, all project files are located in ``src/*``.
-The built-in PHP 7 webserver can be accessed via port 80.
+Create a ``/src`` folder (or choose any other name for it but don't forget to edit the docker-compose.yml!)
+The built-in PHP 7 webserver will serve the content of that folder that can be accessed on port 80.
 
 Example:  ``http://YOUR-DOCKER-IP-OR-HOST``
 
