@@ -19,8 +19,4 @@ RUN update-ca-certificates
 # Cleanup
 RUN rm -rf /var/cache/apk/*
 
-# Setup
-COPY docker/entrypoint.sh /
-RUN chmod +x /entrypoint.sh
-
 EXPOSE 80
