@@ -5,8 +5,9 @@ and the latest Laravel Lumen version.
 
 Features:
 
-    + First-time setup
+    + Lumen first-time setup
     + PHP 7.3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 7 extensions
+    + Uses built-in PHP7 webserver (best to use with NGINX/Apache2 proxy in production)
 
 This image ships with a first-time setup routine, in order to install a Laravel Lumen project.<br>
 That routine will be skipped, if a project exists already.
