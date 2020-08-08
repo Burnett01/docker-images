@@ -3,7 +3,7 @@ services:
   lumen:
     image: "burnett0/alpine-php7-lumen"
     volumes:
-      - ./lumen:/lumen
+      - ./src:/lumen
     ports:
       - "80:80"
     tty: true
