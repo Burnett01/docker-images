@@ -5,7 +5,6 @@ Docker Image for developing PHP-7 applications using Alpine Linux, PHP 7.3 and C
 Features:
 
     + PHP 7.3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 7 extensions
-    + Uses built-in PHP7 webserver (best to use with NGINX/Apache2 proxy in production)
 
 ## Install
 
