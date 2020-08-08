@@ -1,6 +1,8 @@
 # Base Image
 FROM burnett0/alpine-php7-cli-pdo-mysql
 
+LABEL maintainer "Steven Agyekum <Burnett01>"
+
 # Dependencies
 RUN apk --update --no-cache add \
     git curl ca-certificates composer \
