@@ -22,6 +22,7 @@ version: "3"
 services:
   site:
     image: "burnett0/alpine-php7"
+    command: "php -S 0.0.0.0:80 -t /src"
     volumes:
       - ./src:/src
     ports:
@@ -38,4 +39,4 @@ The built-in PHP 7 webserver can be accessed via port 80.
 
 Example:  ``http://YOUR-DOCKER-IP-OR-HOST``
 
-You can change the port and other things in the ``docker-compose.yml`` file.
+You can change the path, port and other things in the ``docker-compose.yml`` file.
