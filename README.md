@@ -1,21 +1,17 @@
-# alpine-php7-lumen ![alpine-php7-lumen](https://github.com/Burnett01/docker-images/workflows/alpine-php7-lumen/badge.svg?branch=alpine-php7-lumen)
+# alpine-php7 ![alpine-php7](https://github.com/Burnett01/docker-images/workflows/alpine-php7/badge.svg?branch=alpine-php7)
 
-Docker Image for developing [Laravel Lumen](https://lumen.laravel.com/) applications using Alpine Linux, PHP 7.3, Composer, <br>
-and the latest Laravel Lumen version.
+Docker Image for developing PHP-7 applications using Alpine Linux, PHP 7.3 and Composer.
 
 Features:
 
-    + First-time setup
     + PHP 7.3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 7 extensions
-
-This image ships with a first-time setup routine, in order to install a Laravel Lumen project.<br>
-That routine will be skipped, if a project exists already.
+    + Uses built-in PHP7 webserver (best to use with NGINX/Apache2 proxy in production)
 
 ## Install
 
 **Use as base-image:**
 
-```FROM burnett0/alpine-php7-lumen```
+```FROM burnett0/alpine-php7```
 
 Exposed Ports: 80
 
@@ -24,10 +20,10 @@ Exposed Ports: 80
 ```yml
 version: "3"
 services:
-  lumen:
-    image: "burnett0/alpine-php7-lumen"
+  site:
+    image: "burnett0/alpine-php7"
     volumes:
-      - ./lumen:/lumen
+      - ./src:/src
     ports:
       - "80:80"
     tty: true
@@ -37,7 +33,7 @@ services:
 
 ## Usage
 
-After setup, all project files are located in ``lumen/*``.
+After setup, all project files are located in ``src/*``.
 The built-in PHP 7 webserver can be accessed via port 80.
 
 Example:  ``http://YOUR-DOCKER-IP-OR-HOST``
