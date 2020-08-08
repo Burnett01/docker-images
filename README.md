@@ -9,12 +9,6 @@ Features:
 
 ## Install
 
-**Use as base-image:**
-
-```FROM burnett0/alpine-php7```
-
-Exposed Ports: 80
-
 **Use with docker-compose:**
 
 ```yml
@@ -34,7 +28,9 @@ services:
 
 ## Usage
 
-Create a ``/src`` folder (or choose any other name for it but don't forget to edit the docker-compose.yml!)
+ All project files are located in your source folder.<br/>
+ In the docker-compose example above, it is ``src/*``.
+
 The built-in PHP 7 webserver will serve the content of that folder that can be accessed on port 80.
 
 Example:  ``http://YOUR-DOCKER-IP-OR-HOST``
