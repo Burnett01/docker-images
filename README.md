@@ -1,12 +1,12 @@
 # alpine-php7-lumen ![alpine-php7-lumen](https://github.com/Burnett01/docker-images/workflows/alpine-php7-lumen/badge.svg?branch=alpine-php7-lumen)
 
-Docker Image for developing [Laravel Lumen](https://lumen.laravel.com/) applications using Alpine Linux, PHP 7.3, Composer, <br>
+Docker Image for developing [Laravel Lumen](https://lumen.laravel.com/) applications using Alpine Linux, PHP 7.4, Composer, <br>
 and the latest Laravel Lumen version.
 
 Features:
 
     + Lumen first-time setup
-    + PHP 7.3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 7 extensions
+    + PHP 7.4, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 7 extensions
     + Uses built-in PHP7 webserver (best to use with NGINX/Apache2 proxy in production)
 
 This image ships with a first-time setup routine, in order to install a Laravel Lumen project.<br>
@@ -17,6 +17,8 @@ That routine will be skipped, if a project exists already.
 **Use as base-image:**
 
 ```FROM burnett0/alpine-php7-lumen```
+
+Exposes: Port 80
 
 If used as base image, you must manually mount your host source folder to ``/lumen`` on the guest.
 
