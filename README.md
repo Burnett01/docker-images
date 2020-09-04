@@ -1,10 +1,10 @@
 # alpine-php7 ![alpine-php7](https://github.com/Burnett01/docker-images/workflows/alpine-php7/badge.svg?branch=alpine-php7)
 
-Docker Image for developing PHP-7 applications using Alpine Linux, PHP 7.3 and Composer.
+Docker Image for developing PHP-7 applications using Alpine Linux, PHP 7.4 and Composer.
 
 Features:
 
-    + PHP 7.3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 7 extensions
+    + PHP 7.4, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 7 extensions
 
 ## Install
 
