@@ -8,13 +8,15 @@ Check branches for image description and source.
 
 ## Available images
 
+### alpine-php7 ![alpine-php7](https://github.com/Burnett01/docker-images/workflows/alpine-php7/badge.svg?branch=alpine-php7)
+
 ### alpine-php7-cli-pdo-mysql ![alpine-php7-cli-pdo-mysql](https://github.com/Burnett01/docker-images/workflows/alpine-php7-cli-pdo-mysql/badge.svg?branch=alpine-php7-cli-pdo-mysql)
+
+### alpine-php7-lumen ![alpine-php7-lumen](https://github.com/Burnett01/docker-images/workflows/alpine-php7-lumen/badge.svg?branch=alpine-php7-lumen)
 
 ### ubuntu-x86_64-cpp17_20-clang9 ![ubuntu-x86_64-cpp17_20-clang9](https://github.com/Burnett01/docker-images/workflows/ubuntu-x86_64-cpp17_20-clang9/badge.svg?branch=ubuntu-x86_64-cpp17_20-clang9)
 
 ### alpine-drawio-batch ![alpine-drawio-batch](https://github.com/Burnett01/docker-images/workflows/alpine-drawio-batch/badge.svg?branch=alpine-drawio-batch)
-
-### alpine-php7-lumen ![alpine-php7-lumen](https://github.com/Burnett01/docker-images/workflows/alpine-php7-lumen/badge.svg?branch=alpine-php7-lumen)
 
 
 ---
