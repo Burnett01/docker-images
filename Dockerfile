@@ -1,5 +1,5 @@
 FROM alpine:edge
 
 # Dependencies
-RUN apk --update --no-cache add bash php7 php7-pdo php7-pdo_mysql
+RUN apk --update --no-cache add bash php8 php8-pdo php8-pdo_mysql
 RUN rm -rf /var/cache/apk/*
