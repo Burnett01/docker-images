@@ -1,7 +1,7 @@
 version: "3"
 services:
   lumen:
-    image: "burnett0/alpine-php7-lumen"
+    image: "burnett0/alpine-php8-lumen"
     volumes:
       - ./src:/lumen
     ports:
