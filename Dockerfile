@@ -18,4 +18,3 @@ RUN update-ca-certificates
 
 # Cleanup
 RUN rm -rf /var/cache/apk/*
-
