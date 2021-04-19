@@ -36,3 +36,4 @@ jobs:
           IMAGE_ID=docker.io/${{ env.DOCKER_USER }}/${{ env.IMAGE_NAME }}
           docker tag image $IMAGE_ID:latest
           docker push $IMAGE_ID:latest
+
