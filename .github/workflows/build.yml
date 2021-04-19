@@ -1,5 +1,5 @@
 
-name: alpine-php7-lumen
+name: alpine-php8-lumen
 
 on: [push]
 
