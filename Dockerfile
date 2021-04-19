@@ -12,4 +12,3 @@ RUN chmod +x /entrypoint.sh
 
 # Entry
 ENTRYPOINT ["/entrypoint.sh"]
-
