@@ -1,15 +1,15 @@
 # Base Image
-FROM burnett0/alpine-php7-cli-pdo-mysql
+FROM burnett0/alpine-php8-cli-pdo-mysql
 
 LABEL maintainer "Steven Agyekum <Burnett01>"
 
 # Dependencies
 RUN apk --update --no-cache add \
     git curl ca-certificates composer \
-    php7-tokenizer php7-zip php7-curl php7-mbstring \
-    php7-dom php7-xml php7-xmlwriter php7-ctype php7-intl php7-pecl-uuid \
-    php7-ftp php7-bcmath php7-pecl-memcached php7-gmp php7-pdo_sqlite \
-    php7-pcntl php7-posix php7-gd php7-soap php7-pecl-xdebug php7-simplexml php7-json
+    php8-tokenizer php8-zip php8-curl php8-mbstring \
+    php8-dom php8-xml php8-xmlwriter php8-ctype php8-intl php8-pecl-uuid \
+    php8-ftp php8-bcmath php8-pecl-memcached php8-gmp php8-pdo_sqlite \
+    php8-pcntl php8-posix php8-gd php8-soap php8-pecl-xdebug php8-simplexml php8-json
 
 # SSL Certs
 RUN curl -O -k http://curl.haxx.se/ca/cacert.pem
