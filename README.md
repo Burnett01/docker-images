@@ -12,6 +12,8 @@ Check branches for image description and source.
 
 ### alpine-php8-cli-pdo-mysql ![alpine-php8-cli-pdo-mysql](https://github.com/Burnett01/docker-images/workflows/alpine-php8-cli-pdo-mysql/badge.svg?branch=alpine-php8-cli-pdo-mysql)
 
+### alpine-php8-lumen ![alpine-php8-lumen](https://github.com/Burnett01/docker-images/workflows/alpine-php8-lumen/badge.svg?branch=alpine-php8-lumen)
+
 ### alpine-php7 ![alpine-php7](https://github.com/Burnett01/docker-images/workflows/alpine-php7/badge.svg?branch=alpine-php7)
 
 ### alpine-php7-cli-pdo-mysql ![alpine-php7-cli-pdo-mysql](https://github.com/Burnett01/docker-images/workflows/alpine-php7-cli-pdo-mysql/badge.svg?branch=alpine-php7-cli-pdo-mysql)
