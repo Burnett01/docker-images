@@ -1,6 +1,6 @@
 # alpine-drawio-batch ![alpine-drawio-batch](https://github.com/Burnett01/docker-images/workflows/alpine-drawio-batch/badge.svg?branch=alpine-drawio-batch)
 
-Docker Image for converting draw.io documents to ``jpeg|png|svg|pdf`` using [drawio-batch](https://github.com/languitar/drawio-batch).
+Docker Image for converting draw.io compressed XML-documents to ``jpeg|png|svg|pdf`` using [drawio-batch](https://github.com/languitar/drawio-batch).
 
 + Node.js stable (Alpine)
 + Chromium
@@ -27,7 +27,11 @@ Available flags:
 --format (pdf|svg|png|jpeg) (Not needed because format is determined from the output extension)
 ```
 
-> docker run --quality 100 --scale 1.0 test.drawio test.png
+### Example:
+
+1. Place your drawio document (test.drawio) into a folder (src) and mount that folder into your container.
+2. Run:
+> docker run burnett0/alpine-drawio-batch -v $(pwd)/src:/src --quality 100 --scale 1.0 src/test.drawio src/test.png
 
 
 ---
