@@ -35,3 +35,4 @@ The built-in PHP 8 webserver will serve the content of that folder that can be a
 Example:  ``http://YOUR-DOCKER-IP-OR-HOST``
 
 You can change the path, port and other things in the ``docker-compose.yml`` file.
+
