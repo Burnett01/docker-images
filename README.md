@@ -4,7 +4,7 @@ Docker Image for developing PHP-8.1 applications using Alpine Linux, PHP 8.1.8-r
 
 Features:
 
-    + PHP 8.1.8-r3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 8.1 extensions
+    + PHP 8.1.8-r3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 8.1 extensions, XDEBUG
 
 ## Install
 
