@@ -1,10 +1,10 @@
-# alpine-php8 ![alpine-php8](https://github.com/Burnett01/docker-images/workflows/alpine-php8/badge.svg?branch=alpine-php8)
+# alpine-php81 ![alpine-php81](https://github.com/Burnett01/docker-images/workflows/alpine-php81/badge.svg?branch=alpine-php81)
 
-Docker Image for developing PHP-8 applications using Alpine Linux, PHP 8.0.3-r0 and Composer.
+Docker Image for developing PHP-8.1 applications using Alpine Linux, PHP 8.1.8-r3 and Composer.
 
 Features:
 
-    + PHP 8.0.3-r0, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 8 extensions
+    + PHP 8.1.8-r3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 8.1 extensions
 
 ## Install
 
@@ -14,7 +14,7 @@ Features:
 version: "3"
 services:
   site:
-    image: "burnett0/alpine-php8"
+    image: "burnett0/alpine-php81"
     command: "php -S 0.0.0.0:80 -t /src"
     volumes:
       - ./src:/src
