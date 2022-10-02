@@ -8,3 +8,4 @@ services:
     ports:
       - "80:80"
     tty: true
+
