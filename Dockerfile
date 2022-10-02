@@ -1,5 +1,5 @@
 # Base Image
-FROM burnett0/alpine-php8
+FROM burnett0/alpine-php81
 
 LABEL maintainer "Steven Agyekum <Burnett01>"
 
