@@ -8,3 +8,4 @@ RUN apk --update --no-cache add nodejs npm yarn
 
 # Cleanup
 RUN rm -rf /var/cache/apk/*
+
