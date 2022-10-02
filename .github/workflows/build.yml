@@ -1,5 +1,5 @@
 
-name: alpine-php8-nodejs
+name: alpine-php81-nodejs
 
 on: [push]
 
