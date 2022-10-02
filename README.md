@@ -1,4 +1,4 @@
-# alpine-php81-nodejs ![alpine-php81-nodejs](https://github.com/Burnett01/docker-images/workflows/alpine-php81-nodejs/badge.svg?branch=alpine-php81-nodejs)
+# alpine-php81-nodejs ![alpine-php81-nodejs](https://github.com/Burnett01/docker-images/workflows/alpine-php8-nodejs/badge.svg?branch=alpine-php81-nodejs)
 
 Docker Image for developing PHP-8.1 applications using Alpine Linux, PHP 8.1.8-r3, Composer, node.js, npm and yarn.
 
