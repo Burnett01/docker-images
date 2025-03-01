@@ -1,7 +1,7 @@
 version: "3"
 services:
   site:
-    image: "burnett0/alpine-php81"
+    image: "burnett0/alpine-php83"
     command: "php -S 0.0.0.0:80 -t /src"
     volumes:
       - ./src:/src
