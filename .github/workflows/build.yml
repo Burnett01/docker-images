@@ -1,21 +1,20 @@
-
-name: alpine-php81-cli-pdo-mysql
+name: alpine-php83-cli-pdo-mysql
 
 on: [push]
 
 env:
-  IMAGE_NAME: ${{ github.workflow	}}
+  IMAGE_NAME: ${{ github.workflow }}
   GITHUB_USER: burnett01
   DOCKER_USER: burnett0
 
 jobs:
 
   build-deploy:
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && true == false
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
+      - uses: actions/checkout@v4
+      
       - name: Build image
         run: | 
           docker build . --file Dockerfile --tag image
