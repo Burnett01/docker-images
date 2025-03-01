@@ -1,5 +1,4 @@
-
-name: alpine-php81
+name: alpine-php83
 
 on: [push]
 
@@ -9,16 +8,16 @@ env:
   DOCKER_USER: burnett0
 
 jobs:
-
   build-deploy:
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' && true == false
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Build image
         run: | 
           docker build . --file Dockerfile --tag image
+      
       - name: Log into Github Docker registry
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ env.GITHUB_USER }} --password-stdin
         
