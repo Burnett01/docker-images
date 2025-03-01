@@ -8,30 +8,13 @@ Check branches for image description and source.
 
 ## Available images
 
-### alpine-php81 ![alpine-php81](https://github.com/Burnett01/docker-images/workflows/alpine-php81/badge.svg?branch=alpine-php81)
+### alpine-php83 ![alpine-php83](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php83)
 
-### alpine-php81-cli-pdo-mysql ![alpine-php81-cli-pdo-mysql](https://github.com/Burnett01/docker-images/workflows/alpine-php81-cli-pdo-mysql/badge.svg?branch=alpine-php81-cli-pdo-mysql)
+### alpine-php83-cli-pdo-mysql ![alpine-php83-cli-pdo-mysql](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php83-cli-pdo-mysql)
 
-### alpine-php81-nodejs ![alpine-php81-nodejs](https://github.com/Burnett01/docker-images/workflows/alpine-php81-nodejs/badge.svg?branch=alpine-php81-nodejs)
+### alpine-drawio-batch
 
-### alpine-php8 ![alpine-php8](https://github.com/Burnett01/docker-images/workflows/alpine-php8/badge.svg?branch=alpine-php8)
-
-### alpine-php8-cli-pdo-mysql ![alpine-php8-cli-pdo-mysql](https://github.com/Burnett01/docker-images/workflows/alpine-php8-cli-pdo-mysql/badge.svg?branch=alpine-php8-cli-pdo-mysql)
-
-### alpine-php8-lumen ![alpine-php8-lumen](https://github.com/Burnett01/docker-images/workflows/alpine-php8-lumen/badge.svg?branch=alpine-php8-lumen)
-
-### alpine-php8-nodejs ![alpine-php8-nodejs](https://github.com/Burnett01/docker-images/workflows/alpine-php8-nodejs/badge.svg?branch=alpine-php8-nodejs)
-
-### alpine-php7 ![alpine-php7](https://github.com/Burnett01/docker-images/workflows/alpine-php7/badge.svg?branch=alpine-php7)
-
-### alpine-php7-cli-pdo-mysql ![alpine-php7-cli-pdo-mysql](https://github.com/Burnett01/docker-images/workflows/alpine-php7-cli-pdo-mysql/badge.svg?branch=alpine-php7-cli-pdo-mysql)
-
-### alpine-php7-lumen ![alpine-php7-lumen](https://github.com/Burnett01/docker-images/workflows/alpine-php7-lumen/badge.svg?branch=alpine-php7-lumen)
-
-### ubuntu-x86_64-cpp17_20-clang9 ![ubuntu-x86_64-cpp17_20-clang9](https://github.com/Burnett01/docker-images/workflows/ubuntu-x86_64-cpp17_20-clang9/badge.svg?branch=ubuntu-x86_64-cpp17_20-clang9)
-
-### alpine-drawio-batch ![alpine-drawio-batch](https://github.com/Burnett01/docker-images/workflows/alpine-drawio-batch/badge.svg?branch=alpine-drawio-batch)
-
+### ubuntu-x86_64-cpp17_20-clang9 
 
 ---
 
@@ -44,4 +27,27 @@ https://hub.docker.com/u/burnett0
 ## Github Package Registry
 
 https://github.com/Burnett01/docker-images/packages
+
+---
+
+### alpine-php81 (DEPRECATED)
+
+### alpine-php81-cli-pdo-mysql (DEPRECATED)
+
+### alpine-php81-nodejs (DEPRECATED)
+
+### alpine-php8 (DEPRECATED)
+
+### alpine-php8-cli-pdo-mysql (DEPRECATED)
+
+### alpine-php8-lumen (DEPRECATED)
+
+### alpine-php8-nodejs (DEPRECATED)
+
+### alpine-php7 (DEPRECATED)
+
+### alpine-php7-cli-pdo-mysql (DEPRECATED)
+
+### alpine-php7-lumen (DEPRECATED)
+
 
