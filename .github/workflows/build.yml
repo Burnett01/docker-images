@@ -3,7 +3,7 @@ name: alpine-php83
 on: [push]
 
 env:
-  IMAGE_NAME: ${{ github.workflow	}}
+  IMAGE_NAME: ${{ github.workflow }}
   GITHUB_USER: burnett01
   DOCKER_USER: burnett0
 
