@@ -1,10 +1,10 @@
-# alpine-php81 ![alpine-php81](https://github.com/Burnett01/docker-images/workflows/alpine-php81/badge.svg?branch=alpine-php81)
+# alpine-php83 ![alpine-php83](https://github.com/Burnett01/docker-images/workflows/alpine-php83/badge.svg?branch=alpine-php83)
 
-Docker Image for developing PHP-8.1 applications using Alpine Linux, PHP 8.1.8-r3 and Composer.
+Docker Image for developing PHP applications using Alpine Linux 3.21, PHP 8.3 and Composer.
 
 Features:
 
-    + PHP 8.1.8-r3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 8.1 extensions, XDEBUG
+    + PHP 8.3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 8.3 extensions, XDEBUG
 
 ## Install
 
@@ -14,7 +14,7 @@ Features:
 version: "3"
 services:
   site:
-    image: "burnett0/alpine-php81"
+    image: "burnett0/alpine-php83"
     command: "php -S 0.0.0.0:80 -t /src"
     volumes:
       - ./src:/src
@@ -30,7 +30,7 @@ services:
  All project files are located in your source folder.<br/>
  In the docker-compose example above, it is ``src/*``.
 
-The built-in PHP 8 webserver will serve the content of that folder that can be accessed on port 80.
+The built-in PHP webserver will serve the content of that folder that can be accessed on port 80.
 
 Example:  ``http://YOUR-DOCKER-IP-OR-HOST``
 
