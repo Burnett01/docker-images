@@ -1,4 +1,4 @@
-# alpine-php83 ![alpine-php83](https://github.com/Burnett01/docker-images/workflows/alpine-php83/badge.svg?branch=alpine-php83)
+# alpine-php83 [![alpine-php83](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php83)](https://github.com/Burnett01/docker-images/actions/workflows/build.yml)
 
 Docker Image for developing PHP applications using Alpine Linux 3.21, PHP 8.3 and Composer.
 
