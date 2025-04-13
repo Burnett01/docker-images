@@ -8,6 +8,10 @@ Check branches for image description and source.
 
 ## Available images
 
+### alpine-php84 ![alpine-php84](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php84)
+
+### alpine-php84-cli-pdo-mysql ![alpine-php84-cli-pdo-mysql](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php84-cli-pdo-mysql)
+
 ### alpine-php83 ![alpine-php83](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php83)
 
 ### alpine-php83-cli-pdo-mysql ![alpine-php83-cli-pdo-mysql](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php83-cli-pdo-mysql)
