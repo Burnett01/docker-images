@@ -1,4 +1,4 @@
-name: alpine-php83
+name: alpine-php84
 
 on: [push]
 

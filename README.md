@@ -1,10 +1,10 @@
-# alpine-php83 [![alpine-php83](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php83)](https://github.com/Burnett01/docker-images/actions/workflows/build.yml)
+# alpine-php84 [![alpine-php84](https://github.com/Burnett01/docker-images/actions/workflows/build.yml/badge.svg?branch=alpine-php84)](https://github.com/Burnett01/docker-images/actions/workflows/build.yml)
 
-Docker Image for developing PHP applications using Alpine Linux 3.21, PHP 8.3 and Composer.
+Docker Image for developing PHP applications using Alpine Linux 3.21, PHP 8.4 and Composer.
 
 Features:
 
-    + PHP 8.3, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 8.3 extensions, XDEBUG
+    + PHP 8.4, MySQL (PDO), SQLite (PDO), Composer, Curl, PHP 8.4 extensions, XDEBUG
 
 ## Install
 
@@ -14,7 +14,7 @@ Features:
 version: "3"
 services:
   site:
-    image: "burnett0/alpine-php83"
+    image: "burnett0/alpine-php84"
     command: "php -S 0.0.0.0:80 -t /src"
     volumes:
       - ./src:/src
