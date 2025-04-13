@@ -1,4 +1,4 @@
-name: alpine-php83-cli-pdo-mysql
+name: alpine-php84-cli-pdo-mysql
 
 on: [push]
 
